@@ -5,8 +5,12 @@ html(lang="en")
 		title PotatoTM Landing Page
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(rel="stylesheet", href="assets/css/main.css")
+		
+		//if lt IE 9
+		script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      
 
 	body
+		include ./sections/_home.jade
 
-		header.big
-			h1 Hello Potato!
+			

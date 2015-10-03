@@ -1,0 +1,76 @@
+section.home
+  padding: 40px 0
+  background:
+    image: url('../images/hero-plate.png')
+    size: cover
+  min-height: 100vh
+  max-height: 1080px
+  color: white
+
+  .row
+    display: inline-block
+    width: 100%
+    text-align: center
+    margin: 0 auto
+
+  .logo
+    float: left
+    text-indent: 101%
+    overflow: hidden
+    white-space: nowrap
+    background:
+      image: url('../images/potato-logo.svg')
+      repeat: no-repeat
+      // color: pink
+      size: contain
+      position: center
+
+    width: 185px
+
+  nav
+    float: right
+
+    ul
+      list-style-type: none
+
+      li
+        display: inline
+        text-transform: uppercase
+      a
+        padding: 9px 15px
+
+        &:hover
+          text-decoration: underline
+
+    .btn
+      border: solid 1px #ffffff
+      border-radius: 20px
+      transition: all ease-in-out 200ms
+
+      &:hover
+        text-decoration: none
+        background-color: transparentize(#ffffff, 0.15)
+        border: 1px solid transparentize(#ffffff, 0.15)
+        color: #a78e78
+
+  .hero
+
+    h1
+      font-size: 59px
+      font-weight: 600
+      margin: 50px 0 0
+      line-height: 1.6em
+
+    p
+      margin: 0 0 50px
+      font-size: 29px
+
+    span
+      font-weight: bold
+
+      &:last-of-type
+        font-size: 14px
+        vertical-align: text-top
+
+    img
+      display: inline-block
