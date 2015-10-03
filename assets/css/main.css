@@ -1,33 +1,4 @@
-/* latin */
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Fira Sans"), local("FiraSans-Regular"), url(http://fonts.gstatic.com/s/firasans/v5/EjsrzDkQUQCDwsBtLpcVQZBw1xU1rKptJj_0jans920.woff2) format("woff2");
-  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
-
-/* latin */
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Fira Sans Italic"), local("FiraSans-Italic"), url(http://fonts.gstatic.com/s/firasans/v5/QURAmFz4b80g324-oF-Uj4gp9Q8gbYrhqGlRav_IXfk.woff2) format("woff2");
-  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
-
-@font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Fira Sans Bold"), local("FiraSans-Bold"), url(http://fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOhampu5_7CjHW5spxoeN3Vs.woff2) format("woff2");
-  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
-
-@font-face {
-  font-family: 'Fira Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Fira Mono"), local("FiraMono"), url(http://fonts.gstatic.com/s/firamono/v3/SlRWfq1zeqXiYWAN-lnG-pBw1xU1rKptJj_0jans920.woff2) format("woff2");
-  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -206,26 +177,31 @@ td,
 th {
   padding: 0; }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
 html,
 body {
   min-height: 100vh; }
 
 body {
   background: #F6F6F8;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
-  font-family: 'Fira Sans' sans-serif;
+  font-family: 'Open Sans' sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
 a {
-  color: #BD5248;
+  color: #fff;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #d89993; }
+  color: white; }
 
 ::-moz-selection {
   background: #FFF498; }
@@ -248,49 +224,81 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #FFF498; }
 
-.gigantic, .huge, .large, .bigger, .big,
-h1, h2, h3, h4, h5, h6 {
-  color: #BD5248;
-  font-weight: bold; }
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto; }
 
-.gigantic {
-  font-size: 110px;
-  line-height: 1.09;
-  letter-spacing: -2px; }
+.row:after,
+.row:before {
+  content: "";
+  display: table; }
 
-.huge, h1 {
-  font-size: 68px;
-  line-height: 1.05;
-  letter-spacing: -1px; }
+.row:after {
+  clear: both; }
 
-.large, h2 {
-  font-size: 42px;
-  line-height: 1.14; }
+[class*='col-'] {
+  float: left; }
 
-.bigger, h3 {
-  font-size: 26px;
-  line-height: 1.38; }
+.col-1-3 {
+  max-width: 380px;
+  margin: 0 15px;
+  background: pink; }
 
-.big, h4 {
-  font-size: 22px;
-  line-height: 1.38; }
-
-.small, small {
-  font-size: 10px;
-  line-height: 1.2; }
-
-p {
-  margin: 0 0 20px 0; }
-
-em {
-  font-style: italic; }
-
-strong {
-  font-weight: bold; }
-
-hr {
-  border: solid #ddd;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 10px 0 30px;
-  height: 0; }
+section.home {
+  padding: 40px 0;
+  background-image: url("../images/hero-plate.png");
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 1080px;
+  color: white; }
+  section.home .row {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+  section.home .logo {
+    float: left;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-image: url("../images/potato-logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 185px; }
+  section.home nav {
+    float: right; }
+    section.home nav ul {
+      list-style-type: none; }
+      section.home nav ul li {
+        display: inline;
+        text-transform: uppercase; }
+      section.home nav ul a {
+        padding: 9px 15px; }
+        section.home nav ul a:hover {
+          text-decoration: underline; }
+    section.home nav .btn {
+      border: solid 1px #ffffff;
+      border-radius: 20px;
+      transition: all ease-in-out 200ms; }
+      section.home nav .btn:hover {
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.85);
+        color: #a78e78; }
+  section.home .hero h1 {
+    font-size: 59px;
+    font-weight: 600;
+    margin: 50px 0 0;
+    line-height: 1.6em; }
+  section.home .hero p {
+    margin: 0 0 50px;
+    font-size: 29px; }
+  section.home .hero span {
+    font-weight: bold; }
+    section.home .hero span:last-of-type {
+      font-size: 14px;
+      vertical-align: text-top; }
+  section.home .hero img {
+    display: inline-block; }
