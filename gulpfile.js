@@ -40,13 +40,17 @@ gulp.task('images', function() {
 			}
 		}))
 		.pipe(gulp.dest(destFolder + 'build/assets/images/'));
-    gulp.src('build/assets/images/**/*')
-    .pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-    }))
-    .pipe(gulp.dest(destFolder + 'build/assets/images'));
+});
+
+// Optimize images in build folder
+gulp.task('image-op', function() {
+	return gulp.src(destFolder + 'build/assets/images/**/*')
+	.pipe(imageop({
+			optimizationLevel: 5,
+			progressive: true,
+			interlaced: true
+	}))
+	.pipe(gulp.dest(destFolder + 'build/assets/images'));
 });
 
 // Process Jade files to HTML
@@ -114,14 +118,16 @@ gulp.task('js', function() {
 });
 
 // Build the project
-gulp.task('build', ['styles', 'jade', 'js', 'images']);
+gulp.task('build', ['styles', 'jade', 'js', 'images', 'image-op']);
 
 // Watch files for changes
 gulp.task('watch', function() {
 	// Watch for styles changes and compile
 	gulp.watch(['assets/css/**/*.sass', 'assets/css/**/*.scss'], ['styles']);
-	// Watch for images and optimize them
+	// Watch for images in src and copy them to build
 	gulp.watch('assets/images/**/*', ['images']);
+	// Watch for images in build and optimize them
+	gulp.watch('assets/images/**/*', ['image-op']);
 	// Watch for JavaScript changes and compile
 	gulp.watch('assets/js/**/*.js', ['js']);
 	// Watch for jade changes and compile
