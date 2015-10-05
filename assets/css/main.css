@@ -252,7 +252,7 @@ section.home {
   padding: 40px 0;
   background-image: url("../images/hero-plate.png");
   background-size: cover;
-  min-height: 100vh;
+  height: 100%;
   max-height: 1080px;
   color: white; }
   section.home .row {
@@ -309,8 +309,7 @@ section.home {
 section.shapes {
   background-image: url("../images/shapes-plate.png");
   background-size: cover;
-  max-width: 100vw;
-  min-height: 100vh;
+  height: 100%;
   max-height: 1080px;
   position: relative;
   overflow: hidden;
@@ -370,3 +369,70 @@ section.shapes {
   section.shapes #potato-small {
     display: inline-block;
     width: 30%; }
+
+section.healthy {
+  background-image: url("../images/healthy-plate.png");
+  background-size: cover;
+  height: 100%;
+  max-height: 1080px;
+  padding: 40px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden; }
+  section.healthy .potato-sack-left {
+    background-image: url("../images/potato-sack-left.png");
+    width: 10276px;
+    height: 1098px;
+    left: -720px;
+    bottom: -600px;
+    position: absolute;
+    background-repeat: no-repeat; }
+  section.healthy .potato-sack-right {
+    background-image: url("../images/potato-sack-right.png");
+    width: 1006px;
+    height: 1022px;
+    right: -650px;
+    bottom: -500px;
+    position: absolute;
+    background-repeat: no-repeat; }
+  section.healthy h2 {
+    font-size: 55px;
+    font-weight: 300;
+    margin: 50px 0 0;
+    line-height: 1.6em; }
+    section.healthy h2 span {
+      font-weight: bold; }
+      section.healthy h2 span:last-of-type {
+        font-size: 18px;
+        line-height: 55px;
+        vertical-align: top;
+        margin-left: -5px; }
+  section.healthy p {
+    margin: 0 0 50px;
+    font-size: 20px; }
+  section.healthy ul {
+    list-style-type: none;
+    margin: 40px auto 0;
+    padding: 0; }
+    section.healthy ul li {
+      display: inline-block;
+      width: 20%;
+      margin: 0;
+      padding: 0;
+      font-size: 29px;
+      position: relative; }
+      section.healthy ul li:after {
+        content: "";
+        background: #ffffff;
+        position: absolute;
+        top: 0;
+        left: 30%;
+        width: 40%;
+        height: 1px; }
+      section.healthy ul li span {
+        font-size: 55px;
+        display: block;
+        line-height: 1.3em; }
+    section.healthy ul a {
+      padding: 9px 15px; }
