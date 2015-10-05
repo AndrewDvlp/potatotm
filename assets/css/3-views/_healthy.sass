@@ -1,0 +1,83 @@
+section.healthy
+  background:
+    image: url('../images/healthy-plate.png')
+    size: cover
+  height: 100%
+  max-height: 1080px
+  padding: 40px 0
+  color: white
+  text-align: center
+  position: relative
+  overflow: hidden
+
+  .potato-sack-left
+    background:
+      image: url('../images/potato-sack-left.png')
+    width: 10276px
+    height: 1098px
+    left: -720px
+    bottom: -600px
+    position: absolute
+    background-repeat: no-repeat
+
+  .potato-sack-right
+    background:
+      image: url('../images/potato-sack-right.png')
+    width: 1006px
+    height: 1022px
+    right: -650px
+    bottom: -500px
+    position: absolute
+    background-repeat: no-repeat
+
+  h2
+    font-size: 55px
+    font-weight: 300
+    margin: 50px 0 0
+    line-height: 1.6em
+
+    span
+      font-weight: bold
+
+      &:last-of-type
+        font-size: 18px
+        line-height: 55px
+        vertical-align: top
+        margin-left: -5px
+
+  p
+    margin: 0 0 50px
+    font-size: 20px
+
+  ul
+    list-style-type: none
+    // position: relative
+    margin: 40px auto 0
+    padding: 0
+
+    li
+      display: inline-block
+      // background: pink
+      width: 20%
+      margin: 0
+      padding: 0
+      font-size: 29px
+      position: relative
+      // border-top: 1px solid #ffffff
+
+      &:after
+        content: ""
+        background: #ffffff
+        position: absolute
+        top: 0
+        left: 30%
+        width: 40%
+        height: 1px
+
+      span
+        font-size: 55px
+        display: block
+        line-height: 1.3em
+
+    a
+      padding: 9px 15px
