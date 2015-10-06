@@ -254,7 +254,8 @@ section.home {
   background-size: cover;
   height: 100%;
   max-height: 1080px;
-  color: white; }
+  color: white;
+  overflow: hidden; }
   section.home .row {
     display: inline-block;
     width: 100%;
@@ -382,7 +383,7 @@ section.healthy {
   overflow: hidden; }
   section.healthy .potato-sack-left {
     background-image: url("../images/potato-sack-left.png");
-    width: 10276px;
+    width: 1027px;
     height: 1098px;
     left: -720px;
     bottom: -600px;
@@ -436,3 +437,82 @@ section.healthy {
         line-height: 1.3em; }
     section.healthy ul a {
       padding: 9px 15px; }
+
+section.transformable {
+  background-color: #f1e0b4;
+  background-size: cover;
+  height: 100%;
+  max-height: 1080px;
+  padding: 40px 0;
+  color: #ac9254;
+  text-align: center;
+  position: relative;
+  overflow: hidden; }
+  section.transformable .mashed-potatoes {
+    background-image: url("../images/mash-potatoes.png");
+    background-size: cover;
+    width: 509px;
+    height: 415px;
+    left: -99px;
+    bottom: -100px;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 100; }
+  section.transformable .potato-wedges {
+    background-image: url("../images/potato-wedges.png");
+    background-size: cover;
+    width: 576px;
+    height: 384px;
+    right: -200px;
+    bottom: -70px;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 100; }
+  section.transformable #potato-rendered {
+    margin: 110px auto;
+    width: 75%;
+    position: relative;
+    font-size: 0;
+    -ms-touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; }
+    section.transformable #potato-rendered:hover {
+      cursor: col-resize; }
+    section.transformable #potato-rendered img {
+      width: 100%;
+      height: auto; }
+  section.transformable #nonrendered {
+    background-image: url("../images/potatorender-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%; }
+  section.transformable .handle {
+    position: absolute;
+    background-image: url("../images/slider.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -95px;
+    left: calc(50% - 10px);
+    bottom: -1000px;
+    z-index: 1000;
+    width: 20px;
+    margin-left: -10px; }
+  section.transformable h2 {
+    font-size: 55px;
+    font-weight: 300;
+    margin: 50px 0 0;
+    line-height: 1.6em; }
+  section.transformable p {
+    margin: 0 0 50px;
+    font-size: 20px; }
+  section.transformable span {
+    font-weight: bold; }
+    section.transformable span:last-of-type {
+      font-size: 10px;
+      line-height: 18px;
+      vertical-align: top;
+      margin-left: -2px; }
