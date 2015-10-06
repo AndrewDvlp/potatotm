@@ -1,6 +1,7 @@
 section.transformable
   background:
-    image: url('../images/transformable-plate.png')
+    // image: url('../images/transformable-plate.png')
+    color: #f1e0b4
     size: cover
   height: 100%
   max-height: 1080px
@@ -20,6 +21,7 @@ section.transformable
     bottom: -100px
     position: absolute
     background-repeat: no-repeat
+    z-index: 100
 
   .potato-wedges
     background:
@@ -27,15 +29,50 @@ section.transformable
       size: cover
     width: 576px
     height: 384px
-    right: -150px
+    right: -200px
     bottom: -70px
     position: absolute
     background-repeat: no-repeat
+    z-index: 100
 
-  .potato-slide
-    margin-bottom: 100px
+  #potato-rendered
+    margin: 110px auto
+    width: 75%
+    position: relative
+    font-size: 0
+    -ms-touch-action: none
+    -webkit-touch-callout: none
+    -webkit-user-select: none
 
+    &:hover
+      cursor: col-resize
 
+    img
+      width: 100%
+      height: auto
+
+  #nonrendered
+    background:
+      image: url('../images/potatorender-2.jpg')
+      repeat: no-repeat
+      size: cover
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 50%
+
+  .handle
+    position: absolute
+    background-image: url('../images/slider.png')
+    background-size: contain
+    background-repeat: no-repeat
+    top: -95px
+    left: calc(50% - 10px)
+    bottom: -1000px
+    z-index: 1000
+    width: 20px
+    margin-left: -10px
 
   h2
     font-size: 55px
