@@ -1,0 +1,110 @@
+section.testimonials
+  background:
+    image: url('../images/rotating-potatoes.png')
+    size: cover
+  background-color: #fcfcfc
+  height: 100vh
+  max-height: 1080px
+  z-index: -1000
+  text-align: center
+  color: #686868
+
+  h2
+    font-size: 55px
+    font-weight: 300
+    margin: 0
+    margin-bottom: 10px
+    padding-top: 110px
+    line-height: 1.6em
+
+
+  .slider-container
+    overflow: hidden
+    width: 100%
+    margin: 0 auto
+
+  #slider
+    position: relative
+    margin: 20px auto 0 auto
+    border-radius: 4px
+
+    ul
+      position: relative
+      margin: 0
+      padding: 0
+      height: 200px
+      list-style-type: none
+      display: none
+
+      li
+        position: relative
+        display: block
+        float: left
+        margin: 0
+        padding: 0
+        width: 900px
+        height: 300px
+        // background: #ccc
+        text-align: center
+        opacity: 0.4
+        transition: opacity 0.3s ease-in-out
+
+        &:nth-child(2)
+          opacity: 1
+
+
+
+  .border-test
+    width: 100%
+    margin: 20px auto 0
+
+  .review-wrapper
+    margin: 0 auto
+    width: 70%
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+
+  .text
+    font-size: 21px
+
+  .author
+    margin-top: 5px
+
+    img
+      width: 45px
+      height: auto
+      border-radius: 50%
+      display: inline-block
+
+    p
+      font-size: 14px
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
+      margin: 0 20px
+      display: inline-block
+      font-weight: 600
+
+    .job-title
+      font-weight: 300
+
+  span.control_prev,
+  span.control_next
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 100
+    display: block
+    padding: 25% 3%
+    width: auto
+    height: auto
+    opacity: 0.8
+    cursor: pointer
+
+    &:hover
+      opacity: 1
+      transition: all ease-in-out 0.2s
+
+  span.control_next
+    right: 0
