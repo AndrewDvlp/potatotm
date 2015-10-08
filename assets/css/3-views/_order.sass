@@ -1,0 +1,83 @@
+section.order
+  background:
+    image: url("../images/shapes-plate.png")
+    size: cover
+  max-height: 1080px
+  text-align: center
+  color: #686886
+
+  .container
+    margin: 0 auto
+
+  h2
+    font-size: 55px
+    font-weight: 300
+    margin: 50px 0
+    line-height: 1.6em
+
+  h4
+    font-weight: 300
+    font-size: 20px
+
+    span
+      font-weight: bold
+
+      &:last-of-type
+        font-size: 10px
+        line-height: 18px
+        vertical-align: top
+        margin-left: -2px
+
+  .col-1
+    width: 33.33%
+    border-right: 1px solid #afafaf
+    height: 560px
+    position: relative
+    float: left
+
+    &:last-child
+      border-right: none
+
+  .cta
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+
+    p
+      font-size: 11px
+      margin-bottom: 20px
+
+    span
+      font-weight: 600
+
+  li
+    list-style: none
+    position: relative
+    text-align: left
+    padding-left: 20%
+
+    &::before
+      content:"\2219"
+      font-weight: 600
+      position: absolute
+      margin-left: -10px
+      top: 0px
+
+  a
+    color: #5cc04c
+    padding: 9px 35px
+    border-radius: 50%
+    display: inline
+    vertical-align: bottom
+    margin-bottom: 5px
+
+    &:hover
+      font-weight: 600
+      color: #ffffff
+      background-color: #5cc04c
+
+  .btn
+    border: solid 1px #5cc04c
+    border-radius: 20px
+    transition: all ease-in-out 100ms
