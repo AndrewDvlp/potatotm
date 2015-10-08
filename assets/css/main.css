@@ -618,3 +618,72 @@ section.testimonials {
       transition: all ease-in-out 0.2s; }
   section.testimonials span.control_next {
     right: 0; }
+
+section.order {
+  background-image: url("../images/shapes-plate.png");
+  background-size: cover;
+  max-height: 1080px;
+  text-align: center;
+  color: #686886; }
+  section.order .container {
+    margin: 0 auto; }
+  section.order h2 {
+    font-size: 55px;
+    font-weight: 300;
+    margin: 50px 0;
+    line-height: 1.6em; }
+  section.order h4 {
+    font-weight: 300;
+    font-size: 20px; }
+    section.order h4 span {
+      font-weight: bold; }
+      section.order h4 span:last-of-type {
+        font-size: 10px;
+        line-height: 18px;
+        vertical-align: top;
+        margin-left: -2px; }
+  section.order .col-1 {
+    width: 33.33%;
+    border-right: 1px solid #afafaf;
+    height: 560px;
+    position: relative;
+    float: left; }
+    section.order .col-1:last-child {
+      border-right: none; }
+  section.order .cta {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    section.order .cta p {
+      font-size: 11px;
+      margin-bottom: 20px; }
+    section.order .cta span {
+      font-weight: 600; }
+  section.order li {
+    list-style: none;
+    position: relative;
+    text-align: left;
+    padding-left: 20%; }
+    section.order li::before {
+      content: "\2219";
+      font-weight: 600;
+      position: absolute;
+      margin-left: -10px;
+      top: 0px; }
+  section.order a {
+    color: #5cc04c;
+    padding: 9px 35px;
+    border-radius: 50%;
+    display: inline;
+    vertical-align: bottom;
+    margin-bottom: 5px; }
+    section.order a:hover {
+      font-weight: 600;
+      color: #ffffff;
+      background-color: #5cc04c; }
+  section.order .btn {
+    border: solid 1px #5cc04c;
+    border-radius: 20px;
+    transition: all ease-in-out 100ms; }
