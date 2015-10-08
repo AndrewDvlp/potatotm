@@ -441,20 +441,23 @@ section.healthy {
 section.transformable {
   background-color: #f1e0b4;
   background-size: cover;
-  height: 100%;
-  max-height: 1080px;
+  height: 820px;
   padding: 40px 0;
   color: #ac9254;
   text-align: center;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
+  section.transformable .potato-container {
+    height: 415px;
+    overflow: hidden;
+    position: absolute;
+    bottom: -100px;
+    width: 100%; }
   section.transformable .mashed-potatoes {
     background-image: url("../images/mash-potatoes.png");
     background-size: cover;
     width: 509px;
     height: 415px;
     left: -99px;
-    bottom: -100px;
     position: absolute;
     background-repeat: no-repeat;
     z-index: 100; }
@@ -464,12 +467,11 @@ section.transformable {
     width: 576px;
     height: 384px;
     right: -200px;
-    bottom: -70px;
     position: absolute;
     background-repeat: no-repeat;
     z-index: 100; }
   section.transformable #potato-rendered {
-    margin: 110px auto;
+    margin: 0 auto;
     width: 75%;
     position: relative;
     font-size: 0;
@@ -490,17 +492,23 @@ section.transformable {
     left: 0;
     height: 100%;
     width: 50%; }
+  section.transformable .hoverdiv {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%; }
   section.transformable .handle {
     position: absolute;
     background-image: url("../images/slider.png");
     background-size: contain;
     background-repeat: no-repeat;
-    top: -95px;
+    top: -5px;
     left: calc(50% - 10px);
-    bottom: -1000px;
-    z-index: 1000;
+    height: 100%;
     width: 20px;
-    margin-left: -10px; }
+    margin-left: 4px; }
   section.transformable h2 {
     font-size: 55px;
     font-weight: 300;
@@ -509,10 +517,104 @@ section.transformable {
   section.transformable p {
     margin: 0 0 50px;
     font-size: 20px; }
-  section.transformable span {
-    font-weight: bold; }
-    section.transformable span:last-of-type {
-      font-size: 10px;
-      line-height: 18px;
-      vertical-align: top;
-      margin-left: -2px; }
+    section.transformable p span {
+      font-weight: bold; }
+      section.transformable p span:last-of-type {
+        font-size: 10px;
+        line-height: 18px;
+        vertical-align: top;
+        margin-left: -2px; }
+
+section.testimonials {
+  background-image: url("../images/rotating-potatoes.png");
+  background-size: cover;
+  background-color: #fcfcfc;
+  height: 100vh;
+  max-height: 1080px;
+  z-index: -1000;
+  text-align: center;
+  color: #686868; }
+  section.testimonials h2 {
+    font-size: 55px;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 10px;
+    padding-top: 110px;
+    line-height: 1.6em; }
+  section.testimonials .slider-container {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto; }
+  section.testimonials #slider {
+    position: relative;
+    margin: 20px auto 0 auto;
+    border-radius: 4px; }
+    section.testimonials #slider ul {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      height: 200px;
+      list-style-type: none;
+      display: none; }
+      section.testimonials #slider ul li {
+        position: relative;
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 900px;
+        height: 300px;
+        text-align: center;
+        opacity: 0.4;
+        transition: opacity 0.3s ease-in-out; }
+        section.testimonials #slider ul li:nth-child(2) {
+          opacity: 1; }
+  section.testimonials .border-test {
+    width: 100%;
+    margin: 20px auto 0; }
+  section.testimonials .review-wrapper {
+    margin: 0 auto;
+    width: 70%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  section.testimonials .text {
+    font-size: 21px; }
+  section.testimonials .author {
+    margin-top: 5px; }
+    section.testimonials .author img {
+      width: 45px;
+      height: auto;
+      border-radius: 50%;
+      display: inline-block; }
+    section.testimonials .author p {
+      font-size: 14px;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      margin: 0 20px;
+      display: inline-block;
+      font-weight: 600; }
+    section.testimonials .author .job-title {
+      font-weight: 300; }
+  section.testimonials span.control_prev,
+  section.testimonials span.control_next {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 100;
+    display: block;
+    padding: 25% 3%;
+    width: auto;
+    height: auto;
+    opacity: 0.8;
+    cursor: pointer; }
+    section.testimonials span.control_prev:hover,
+    section.testimonials span.control_next:hover {
+      opacity: 1;
+      transition: all ease-in-out 0.2s; }
+  section.testimonials span.control_next {
+    right: 0; }
