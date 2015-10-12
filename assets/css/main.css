@@ -661,6 +661,8 @@ section.order {
       margin-bottom: 20px; }
     section.order .cta span {
       font-weight: 600; }
+  section.order .row {
+    padding-bottom: 100px; }
   section.order li {
     list-style: none;
     position: relative;
@@ -687,3 +689,33 @@ section.order {
     border: solid 1px #5cc04c;
     border-radius: 20px;
     transition: all ease-in-out 100ms; }
+
+section.footer {
+  height: 130px;
+  background: #ffffff;
+  color: #686868; }
+  section.footer .row {
+    padding-top: 30px; }
+  section.footer p {
+    float: left;
+    font-size: 13px; }
+    section.footer p span {
+      font-weight: bold; }
+      section.footer p span:last-of-type {
+        font-size: 8px;
+        line-height: 14px;
+        vertical-align: top;
+        margin-left: -2px; }
+  section.footer ul {
+    float: right;
+    display: inline;
+    font-size: 14px; }
+    section.footer ul li {
+      list-style: none;
+      display: inline;
+      padding: 4px 12px; }
+  section.footer a {
+    color: #686868;
+    text-decoration: none; }
+    section.footer a:hover {
+      text-decoration: underline; }
