@@ -3,9 +3,10 @@ section.home
   background:
     image: url('../images/hero-plate.png')
     size: cover
+    image: radial-gradient(circle #c8b098, #a48b75 70%)
   height: 100%
   max-height: 1080px
-  color: white
+  color: $alt-text-color
   overflow: hidden
 
   .row
@@ -15,6 +16,7 @@ section.home
     margin: 0 auto
 
   .logo
+    margin-left: 25px
     float: left
     text-indent: 101%
     overflow: hidden
@@ -22,11 +24,10 @@ section.home
     background:
       image: url('../images/potato-logo.svg')
       repeat: no-repeat
-      // color: pink
       size: contain
       position: center
 
-    width: 185px
+    width: 165px
 
   nav
     float: right
@@ -38,7 +39,7 @@ section.home
         display: inline
         text-transform: uppercase
       a
-        padding: 9px 15px
+        padding: 8px 11px
 
         &:hover
           text-decoration: underline
@@ -50,21 +51,18 @@ section.home
 
       &:hover
         text-decoration: none
-        background-color: transparentize(#ffffff, 0.15)
-        border: 1px solid transparentize(#ffffff, 0.15)
+        background-color: #ffffff
+        border: 1px solid #ffffff
         color: #a78e78
 
   .hero
 
     h1
-      font-size: 59px
-      font-weight: 600
-      margin: 50px 0 0
-      line-height: 1.6em
+      margin: 60px 0 5px
 
     p
       margin: 0 0 50px
-      font-size: 29px
+      font-size: 22px
 
     span
       font-weight: bold
