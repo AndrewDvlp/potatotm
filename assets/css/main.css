@@ -186,15 +186,16 @@ html,
 body {
   min-height: 100vh; }
   html h1,
-  body h1 {
+  html h2,
+  body h1, body h2 {
     margin: 0; }
 
 body {
   background: #F6F6F8;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   font-family: 'Open Sans' sans-serif;
-  color: #2E2D33;
+  color: #696969;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
@@ -227,8 +228,25 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #FFF498; }
 
+.gigantic, .huge, .large, .bigger, .big,
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; }
+
+.huge, h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: -1px; }
+
+.large, h2 {
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 42px; }
+
+p {
+  line-height: 1.4; }
+
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   width: 90%;
   margin: 0 auto; }
 
@@ -243,18 +261,14 @@ body {
 [class*='col-'] {
   float: left; }
 
-.col-1-3 {
-  max-width: 380px;
-  margin: 0 15px;
-  background: pink; }
-
 section.home {
   padding: 40px 0;
   background-image: url("../images/hero-plate.png");
   background-size: cover;
+  background-image: radial-gradient(circle #c8b098, #a48b75 70%);
   height: 100%;
   max-height: 1080px;
-  color: white;
+  color: #ffffff;
   overflow: hidden; }
   section.home .row {
     display: inline-block;
@@ -262,6 +276,7 @@ section.home {
     text-align: center;
     margin: 0 auto; }
   section.home .logo {
+    margin-left: 25px;
     float: left;
     text-indent: 101%;
     overflow: hidden;
@@ -270,7 +285,7 @@ section.home {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 185px; }
+    width: 165px; }
   section.home nav {
     float: right; }
     section.home nav ul {
@@ -279,7 +294,7 @@ section.home {
         display: inline;
         text-transform: uppercase; }
       section.home nav ul a {
-        padding: 9px 15px; }
+        padding: 8px 11px; }
         section.home nav ul a:hover {
           text-decoration: underline; }
     section.home nav .btn {
@@ -288,17 +303,14 @@ section.home {
       transition: all ease-in-out 200ms; }
       section.home nav .btn:hover {
         text-decoration: none;
-        background-color: rgba(255, 255, 255, 0.85);
-        border: 1px solid rgba(255, 255, 255, 0.85);
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
         color: #a78e78; }
   section.home .hero h1 {
-    font-size: 59px;
-    font-weight: 600;
-    margin: 50px 0 0;
-    line-height: 1.6em; }
+    margin: 60px 0 5px; }
   section.home .hero p {
     margin: 0 0 50px;
-    font-size: 29px; }
+    font-size: 22px; }
   section.home .hero span {
     font-weight: bold; }
     section.home .hero span:last-of-type {
@@ -321,49 +333,47 @@ section.shapes {
   section.shapes .row {
     position: relative;
     text-align: center;
-    color: #686868;
-    z-index: 10; }
+    color: #696969;
+    z-index: 10;
+    width: 80%;
+    margin: 0 auto; }
   section.shapes .potato-blur-1 {
     background-image: url("../images/potato-blur-1.png");
-    width: 331px;
-    height: 452px;
-    left: -140px;
-    top: -145px; }
+    width: 248px;
+    height: 339px;
+    left: -120px;
+    top: -85px; }
   section.shapes .potato-blur-2 {
     background-image: url("../images/potato-blur-2.png");
-    width: 430px;
-    height: 474px;
-    right: -40px;
-    top: -364px; }
+    width: 323px;
+    height: 356px;
+    right: -20px;
+    top: -274px; }
   section.shapes .potato-blur-3 {
     background-image: url("../images/potato-blur-3.png");
-    width: 454px;
-    height: 608px;
-    right: -254px;
-    bottom: -228px;
-    position: absolute; }
+    width: 341px;
+    height: 457px;
+    right: -194px;
+    bottom: -178px; }
   section.shapes .potato-blur-4 {
     background-image: url("../images/potato-blur-4.png");
-    width: 199px;
-    height: 249px;
-    left: -100px;
-    bottom: 140px; }
-  section.shapes h2 {
-    font-size: 55px;
-    font-weight: 300;
-    margin: 50px 0 0;
-    line-height: 1.6em; }
+    width: 149px;
+    height: 186px;
+    left: -50px;
+    bottom: 90px; }
   section.shapes p {
-    margin: 0 0 50px;
-    font-size: 20px; }
+    margin: 10px 0 40px;
+    font-size: 18px; }
   section.shapes span {
     font-weight: bold; }
     section.shapes span:last-of-type {
-      font-size: 14px;
-      vertical-align: text-top; }
+      font-size: 8px;
+      vertical-align: top;
+      line-height: 12px;
+      margin-left: -2px; }
   section.shapes #five-potatoes {
-    width: 80%;
-    margin: 20px 0 40px; }
+    width: 90%;
+    margin: 10px 0 40px; }
   section.shapes #potato-big {
     display: inline-block;
     width: 60%; }
@@ -397,18 +407,13 @@ section.healthy {
     bottom: -500px;
     position: absolute;
     background-repeat: no-repeat; }
-  section.healthy h2 {
-    font-size: 55px;
-    font-weight: 300;
-    margin: 50px 0 0;
-    line-height: 1.6em; }
-    section.healthy h2 span {
-      font-weight: bold; }
-      section.healthy h2 span:last-of-type {
-        font-size: 18px;
-        line-height: 55px;
-        vertical-align: top;
-        margin-left: -5px; }
+  section.healthy h2 span {
+    font-weight: bold; }
+    section.healthy h2 span:last-of-type {
+      font-size: 18px;
+      line-height: 55px;
+      vertical-align: top;
+      margin-left: -5px; }
   section.healthy p {
     margin: 0 0 50px;
     font-size: 20px; }
