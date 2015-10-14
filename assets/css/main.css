@@ -194,7 +194,7 @@ body {
   background: #F6F6F8;
   font-size: 14px;
   line-height: 1.6;
-  font-family: 'Open Sans' sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #696969;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -265,7 +265,7 @@ section.home {
   padding: 40px 0;
   background-image: url("../images/hero-plate.png");
   background-size: cover;
-  background-image: radial-gradient(circle #c8b098, #a48b75 70%);
+  background-image: radial-gradient(circle, #c8b098, #a48b75 60%);
   height: 100%;
   max-height: 1080px;
   color: #ffffff;
@@ -384,6 +384,7 @@ section.shapes {
 section.healthy {
   background-image: url("../images/healthy-plate.png");
   background-size: cover;
+  background-image: radial-gradient(#82A86E, #79A067 60%);
   height: 100%;
   max-height: 1080px;
   padding: 40px 0;
@@ -393,27 +394,33 @@ section.healthy {
   overflow: hidden; }
   section.healthy .potato-sack-left {
     background-image: url("../images/potato-sack-left.png");
-    width: 1027px;
-    height: 1098px;
-    left: -720px;
-    bottom: -600px;
+    width: 770px;
+    height: 824px;
+    left: -495px;
+    bottom: -370px;
     position: absolute;
     background-repeat: no-repeat; }
   section.healthy .potato-sack-right {
     background-image: url("../images/potato-sack-right.png");
-    width: 1006px;
-    height: 1022px;
-    right: -650px;
-    bottom: -500px;
+    width: 501px;
+    height: 735px;
+    right: -305px;
+    bottom: -310px;
     position: absolute;
     background-repeat: no-repeat; }
+  section.healthy .potato-healthy {
+    max-width: 400px;
+    margin: 0 auto; }
+    section.healthy .potato-healthy img {
+      width: 100%;
+      height: auto; }
   section.healthy h2 span {
     font-weight: bold; }
     section.healthy h2 span:last-of-type {
-      font-size: 18px;
-      line-height: 55px;
+      font-size: 14px;
+      line-height: 45px;
       vertical-align: top;
-      margin-left: -5px; }
+      margin-left: -3px; }
   section.healthy p {
     margin: 0 0 50px;
     font-size: 20px; }
@@ -426,7 +433,7 @@ section.healthy {
       width: 20%;
       margin: 0;
       padding: 0;
-      font-size: 29px;
+      font-size: 22px;
       position: relative; }
       section.healthy ul li:after {
         content: "";
@@ -437,7 +444,7 @@ section.healthy {
         width: 40%;
         height: 1px; }
       section.healthy ul li span {
-        font-size: 55px;
+        font-size: 44px;
         display: block;
         line-height: 1.3em; }
     section.healthy ul a {
