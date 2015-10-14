@@ -238,9 +238,12 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px; }
 
 .large, h2 {
+  font-size: 42px;
   font-weight: 300;
-  line-height: 1.6;
-  font-size: 42px; }
+  line-height: 1.6; }
+
+.big, h4 {
+  font-weight: 300; }
 
 p {
   line-height: 1.4; }
@@ -453,7 +456,7 @@ section.healthy {
 section.transformable {
   background-color: #f1e0b4;
   background-size: cover;
-  height: 820px;
+  height: 720px;
   padding: 40px 0;
   color: #ac9254;
   text-align: center;
@@ -462,7 +465,7 @@ section.transformable {
     height: 415px;
     overflow: hidden;
     position: absolute;
-    bottom: -100px;
+    bottom: -80px;
     width: 100%; }
   section.transformable .mashed-potatoes {
     background-image: url("../images/mash-potatoes.png");
@@ -521,45 +524,35 @@ section.transformable {
     height: 100%;
     width: 20px;
     margin-left: 4px; }
-  section.transformable h2 {
-    font-size: 55px;
-    font-weight: 300;
-    margin: 50px 0 0;
-    line-height: 1.6em; }
   section.transformable p {
     margin: 0 0 50px;
-    font-size: 20px; }
+    font-size: 18px; }
     section.transformable p span {
       font-weight: bold; }
       section.transformable p span:last-of-type {
-        font-size: 10px;
-        line-height: 18px;
+        font-size: 8px;
         vertical-align: top;
+        line-height: 12px;
         margin-left: -2px; }
 
 section.testimonials {
   background-image: url("../images/rotating-potatoes.png");
   background-size: cover;
   background-color: #fcfcfc;
-  height: 100vh;
   max-height: 1080px;
   z-index: -1000;
   text-align: center;
   color: #686868; }
   section.testimonials h2 {
-    font-size: 55px;
-    font-weight: 300;
-    margin: 0;
     margin-bottom: 10px;
-    padding-top: 110px;
-    line-height: 1.6em; }
+    padding-top: 110px; }
   section.testimonials .slider-container {
     overflow: hidden;
     width: 100%;
     margin: 0 auto; }
   section.testimonials #slider {
     position: relative;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 150px;
     border-radius: 4px; }
     section.testimonials #slider ul {
       position: relative;
@@ -574,11 +567,11 @@ section.testimonials {
         float: left;
         margin: 0;
         padding: 0;
-        width: 900px;
+        width: 800px;
         height: 300px;
         text-align: center;
         opacity: 0.4;
-        transition: opacity 0.3s ease-in-out; }
+        transition: opacity 0.25s ease-in-out; }
         section.testimonials #slider ul li:nth-child(2) {
           opacity: 1; }
   section.testimonials .border-test {
@@ -592,7 +585,7 @@ section.testimonials {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
   section.testimonials .text {
-    font-size: 21px; }
+    font-size: 18px; }
   section.testimonials .author {
     margin-top: 5px; }
     section.testimonials .author img {
@@ -634,19 +627,17 @@ section.testimonials {
 section.order {
   background-image: url("../images/shapes-plate.png");
   background-size: cover;
+  background-image: linear-gradient(#EAEAEA, #F7F7F7, #EAEAEA);
   max-height: 1080px;
   text-align: center;
   color: #686886; }
   section.order .container {
+    padding: 50px 5%;
     margin: 0 auto; }
   section.order h2 {
-    font-size: 55px;
-    font-weight: 300;
-    margin: 50px 0;
-    line-height: 1.6em; }
+    margin-bottom: 30px; }
   section.order h4 {
-    font-weight: 300;
-    font-size: 20px; }
+    font-size: 18px; }
     section.order h4 span {
       font-weight: bold; }
       section.order h4 span:last-of-type {
@@ -657,7 +648,7 @@ section.order {
   section.order .col-1 {
     width: 33.33%;
     border-right: 1px solid #afafaf;
-    height: 560px;
+    height: 530px;
     position: relative;
     float: left; }
     section.order .col-1:last-child {
@@ -674,7 +665,7 @@ section.order {
     section.order .cta span {
       font-weight: 600; }
   section.order .row {
-    padding-bottom: 100px; }
+    padding-bottom: 50px; }
   section.order li {
     list-style: none;
     position: relative;
