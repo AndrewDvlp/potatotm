@@ -9,7 +9,7 @@ section.healthy
       .potato-healthy
         img(src="assets/images/potato-healthy.png", alt="")
       ul
-        li #[span 110] calories
-        li #[span 26g] carbohydrate
-        li #[span 3g] protein
-        li #[span 0g] fat
+        li #[span.timer(data-from="0" data-to="110") 0] #[p.clear calories]
+        li #[span.timer(data-from="0" data-to="26") 0]#[span g] #[p.clear carbohydrate]
+        li #[span.timer(data-from="0" data-to="3") 0]#[span g] #[p.clear protein]
+        li #[span 0g] #[p.clear fat]

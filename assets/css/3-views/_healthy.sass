@@ -57,6 +57,7 @@ section.healthy
     list-style-type: none
     margin: 40px auto 0
     padding: 0
+    max-width: 70%
 
     li
       display: inline-block
@@ -77,8 +78,13 @@ section.healthy
 
       span
         font-size: 44px
-        display: block
+        display: inline-block
         line-height: 1.3em
+
+        .clear
+          content: ""
+          display: table
+          clear: both
 
     a
       padding: 9px 15px
