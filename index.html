@@ -51,10 +51,18 @@
           <p>The majority of carbohydrates in potatoes are complex <br> carbohydrates, your body's main energy source.</p>
           <div class="potato-healthy"><img src="assets/images/potato-healthy.png" alt=""></div>
           <ul>
-            <li><span>110</span> calories</li>
-            <li><span>26g</span> carbohydrate</li>
-            <li><span>3g</span> protein</li>
-            <li><span>0g</span> fat</li>
+            <li><span data-from="0" data-to="110" class="timer">0</span> 
+              <p class="clear">calories</p>
+            </li>
+            <li><span data-from="0" data-to="26" class="timer">0</span><span>g</span> 
+              <p class="clear">carbohydrate</p>
+            </li>
+            <li><span data-from="0" data-to="3" class="timer">0</span><span>g</span> 
+              <p class="clear">protein</p>
+            </li>
+            <li><span>0g</span> 
+              <p class="clear">fat</p>
+            </li>
           </ul>
         </div>
       </div>
@@ -170,6 +178,7 @@
       </div>
     </section>
     <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/vendor/jquery.countTo.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
