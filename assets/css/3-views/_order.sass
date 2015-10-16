@@ -6,15 +6,13 @@ section.order
   max-height: 1080px
   text-align: center
   color: #686886
-  //
+
   .container
     padding: 50px 5%
     margin: 0 auto
-    // width: 0%
 
   h2
     margin-bottom: 30px
-  //   line-height: 1.6em
 
   h4
     font-size: 18px
@@ -88,3 +86,16 @@ section.order
     border: solid 1px #5cc04c
     border-radius: 20px
     transition: all ease-in-out 100ms
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+    .container
+      padding: 20px 0% 0px
+
+    ul
+      padding-left: 0px
+
+    .col-1
+      height: 460px
+
+    h2
+      margin-bottom: 15px

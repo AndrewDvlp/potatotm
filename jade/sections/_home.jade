@@ -1,15 +1,11 @@
-section.home
+section.home(id="home")
   .container
     .row
       .logo
         p PotatoTM
-      
+        
       nav
-        ul
-          li: a(href="http://") ABOUT
-          li: a(href="http://") FEATURES
-          li: a(href="http://") NUTRITION
-          li: a(href="http://").btn BUY it NOW
+        include ./_nav-links.jade
         
     .row.hero    
       h1.huge "Sweet, Nutritious and Delicious"

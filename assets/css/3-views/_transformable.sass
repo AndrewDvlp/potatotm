@@ -18,7 +18,7 @@ section.transformable
   .mashed-potatoes
     background:
       image: url('../images/mash-potatoes.png')
-      size: cover
+      size: contain
     width: 509px
     height: 415px
     left: -99px
@@ -29,7 +29,7 @@ section.transformable
   .potato-wedges
     background:
       image: url('../images/potato-wedges.png')
-      size: cover
+      size: contain
     width: 576px
     height: 384px
     right: -200px
@@ -96,3 +96,19 @@ section.transformable
         vertical-align: top
         line-height: 12px
         margin-left: -2px
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+    padding-top: 20px
+    height: 570px
+    #potato-rendered
+      width: 90%
+
+    .mashed-potatoes
+      width: 320px
+      top: 110px
+      left: -90px
+
+    .potato-wedges
+      width: 380px
+      top: 110px
+      right: -190px

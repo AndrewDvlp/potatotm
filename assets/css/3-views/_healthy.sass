@@ -3,17 +3,16 @@ section.healthy
     image: url('../images/healthy-plate.png')
     size: cover
     image: radial-gradient(#82A86E, #79A067 60%)
-  height: 100%
   max-height: 1080px
   padding: 40px 0
   color: white
-  text-align: center
   position: relative
   overflow: hidden
 
   .potato-sack-left
     background:
       image: url('../images/potato-sack-left.png')
+      size: contain
     width: 770px
     height: 824px
     left: -495px
@@ -24,6 +23,7 @@ section.healthy
   .potato-sack-right
     background:
       image: url('../images/potato-sack-right.png')
+      size: contain
     width: 501px
     height: 735px
     right: -305px
@@ -51,7 +51,7 @@ section.healthy
 
   p
     margin: 0 0 50px
-    font-size: 20px
+    font-size: 18px
 
   ul
     list-style-type: none
@@ -88,3 +88,26 @@ section.healthy
 
     a
       padding: 9px 15px
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+    padding-top: 20px
+
+    .potato-healthy
+      max-width: 45%
+
+    p
+      margin-bottom: 30px
+
+    ul
+      margin-top: 20px
+      max-width: 80%
+
+    .potato-sack-left
+      width: 520px
+      left: -315px
+      bottom: -490px
+
+    .potato-sack-right
+      width: 360px
+      right: -190px
+      bottom: -410px

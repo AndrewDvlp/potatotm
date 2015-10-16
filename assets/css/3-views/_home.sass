@@ -12,10 +12,9 @@ section.home
   .row
     display: inline-block
     width: 100%
-    text-align: center
-    margin: 0 auto
 
   .logo
+    width: 164px
     margin-left: 25px
     float: left
     text-indent: 101%
@@ -27,13 +26,12 @@ section.home
       size: contain
       position: center
 
-    width: 165px
-
   nav
     float: right
 
     ul
       list-style-type: none
+      padding: 0
 
       li
         display: inline
@@ -73,3 +71,17 @@ section.home
 
     img
       display: inline-block
+      max-width: 70%
+      height: auto
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+    .logo, nav
+      float: none
+      margin: 0 auto
+
+    .logo
+      width: 325px
+      margin-bottom: 20px
+
+    .hero h1
+      margin-top: 35px

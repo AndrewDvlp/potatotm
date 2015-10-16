@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+smoothScroll(1000);
 
 // Gallery function
 	var inkbox = document.getElementById("potato-rendered");
@@ -82,7 +82,6 @@ $(document).ready(function () {
 		var nextSectionTop = $('.shapes').next().offset().top + winHeight;
 
 		if ((winHeight + wScroll) > Math.abs(offTop) && (winHeight + wScroll) < nextSectionTop - 250 ) {
-			console.log('animating');
 			$('.potato-blur-1').css({
 				'transform' : 'translateY('+ wScroll/ 25 +'%)'
 			});
@@ -101,11 +100,12 @@ $(document).ready(function () {
 // End Parallax function
 
 
+// trigger and clear
 	var triggerClear = function() {
 		triggerClear = function(){};
 		$('.timer').one().countTo();
-		console.log('happened once');
 	};
+// end trigger and clear
 
 // Trigger Healthy counter
 
@@ -115,10 +115,7 @@ $(document).ready(function () {
 		var winHeight = $(window).height();
 		var offTop = $('.healthy').offset().top;
 
-		if (wScroll + winHeight > offTop + 700) {
-			// myfunct = function(){};
-			console.log('its happening');
-			// $('.timer').one().countTo();
+		if (wScroll + winHeight > offTop + 650) {
 			triggerClear();
 		}
 
@@ -126,8 +123,21 @@ $(document).ready(function () {
 
 // End Trigger Healthy counter
 
-// trigger and clear
 
 
 // document.ready brackets
 });
+
+
+function smoothScroll (duration) {
+	$('a[href^=#]').on('click', function(event) {
+		var target = $($(this).attr('href'));
+
+		if( target.length) {
+			event.preventDefault();
+			$('html, body').animate({
+				scrollTop: target.offset().top
+			}, duration);
+		}
+	});
+}
