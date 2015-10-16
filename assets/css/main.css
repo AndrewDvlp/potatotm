@@ -251,7 +251,8 @@ p {
 .container {
   max-width: 1120px;
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 .row:after,
 .row:before {
@@ -275,10 +276,9 @@ section.home {
   overflow: hidden; }
   section.home .row {
     display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto; }
+    width: 100%; }
   section.home .logo {
+    width: 164px;
     margin-left: 25px;
     float: left;
     text-indent: 101%;
@@ -287,12 +287,12 @@ section.home {
     background-image: url("../images/potato-logo.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
-    width: 165px; }
+    background-position: center; }
   section.home nav {
     float: right; }
     section.home nav ul {
-      list-style-type: none; }
+      list-style-type: none;
+      padding: 0; }
       section.home nav ul li {
         display: inline;
         text-transform: uppercase; }
@@ -320,22 +320,32 @@ section.home {
       font-size: 14px;
       vertical-align: text-top; }
   section.home .hero img {
-    display: inline-block; }
+    display: inline-block;
+    max-width: 70%;
+    height: auto; }
+  @media (min-width: 760px) and (max-width: 985px) {
+    section.home .logo, section.home nav {
+      float: none;
+      margin: 0 auto; }
+    section.home .logo {
+      width: 325px;
+      margin-bottom: 20px; }
+    section.home .hero h1 {
+      margin-top: 35px; } }
 
 section.shapes {
   background-image: url("../images/shapes-plate.png");
   background-size: cover;
-  height: 100%;
   max-height: 1080px;
   position: relative;
   overflow: hidden;
   padding: 40px 0; }
   section.shapes [class*='potato-blur-'] {
     position: absolute;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-size: contain; }
   section.shapes .row {
     position: relative;
-    text-align: center;
     color: #696969;
     z-index: 10;
     width: 80%;
@@ -383,20 +393,38 @@ section.shapes {
   section.shapes #potato-small {
     display: inline-block;
     width: 30%; }
+  @media (min-width: 760px) and (max-width: 985px) {
+    section.shapes {
+      padding-top: 20px; }
+      section.shapes .potato-blur-1 {
+        top: -225px;
+        width: 220px; }
+      section.shapes .potato-blur-2 {
+        width: 290px;
+        right: -70px; }
+      section.shapes .potato-blur-3 {
+        height: 350px;
+        right: -230px;
+        bottom: -215px; }
+      section.shapes .potato-blur-4 {
+        width: 100px;
+        left: -35px;
+        bottom: -40px; }
+      section.shapes .row {
+        width: 100%; } }
 
 section.healthy {
   background-image: url("../images/healthy-plate.png");
   background-size: cover;
   background-image: radial-gradient(#82A86E, #79A067 60%);
-  height: 100%;
   max-height: 1080px;
   padding: 40px 0;
   color: white;
-  text-align: center;
   position: relative;
   overflow: hidden; }
   section.healthy .potato-sack-left {
     background-image: url("../images/potato-sack-left.png");
+    background-size: contain;
     width: 770px;
     height: 824px;
     left: -495px;
@@ -405,6 +433,7 @@ section.healthy {
     background-repeat: no-repeat; }
   section.healthy .potato-sack-right {
     background-image: url("../images/potato-sack-right.png");
+    background-size: contain;
     width: 501px;
     height: 735px;
     right: -305px;
@@ -426,7 +455,7 @@ section.healthy {
       margin-left: -3px; }
   section.healthy p {
     margin: 0 0 50px;
-    font-size: 20px; }
+    font-size: 18px; }
   section.healthy ul {
     list-style-type: none;
     margin: 40px auto 0;
@@ -457,6 +486,24 @@ section.healthy {
           clear: both; }
     section.healthy ul a {
       padding: 9px 15px; }
+  @media (min-width: 760px) and (max-width: 985px) {
+    section.healthy {
+      padding-top: 20px; }
+      section.healthy .potato-healthy {
+        max-width: 45%; }
+      section.healthy p {
+        margin-bottom: 30px; }
+      section.healthy ul {
+        margin-top: 20px;
+        max-width: 80%; }
+      section.healthy .potato-sack-left {
+        width: 520px;
+        left: -315px;
+        bottom: -490px; }
+      section.healthy .potato-sack-right {
+        width: 360px;
+        right: -190px;
+        bottom: -410px; } }
 
 section.transformable {
   background-color: #f1e0b4;
@@ -474,7 +521,7 @@ section.transformable {
     width: 100%; }
   section.transformable .mashed-potatoes {
     background-image: url("../images/mash-potatoes.png");
-    background-size: cover;
+    background-size: contain;
     width: 509px;
     height: 415px;
     left: -99px;
@@ -483,7 +530,7 @@ section.transformable {
     z-index: 100; }
   section.transformable .potato-wedges {
     background-image: url("../images/potato-wedges.png");
-    background-size: cover;
+    background-size: contain;
     width: 576px;
     height: 384px;
     right: -200px;
@@ -539,18 +586,32 @@ section.transformable {
         vertical-align: top;
         line-height: 12px;
         margin-left: -2px; }
+  @media (min-width: 760px) and (max-width: 985px) {
+    section.transformable {
+      padding-top: 20px;
+      height: 570px; }
+      section.transformable #potato-rendered {
+        width: 90%; }
+      section.transformable .mashed-potatoes {
+        width: 320px;
+        top: 110px;
+        left: -90px; }
+      section.transformable .potato-wedges {
+        width: 380px;
+        top: 110px;
+        right: -190px; } }
 
 section.testimonials {
   background-image: url("../images/rotating-potatoes.png");
   background-size: cover;
+  background-position: center center;
   background-color: #fcfcfc;
   max-height: 1080px;
   z-index: -1000;
   text-align: center;
   color: #686868; }
   section.testimonials h2 {
-    margin-bottom: 10px;
-    padding-top: 110px; }
+    padding-top: 120px; }
   section.testimonials .slider-container {
     overflow: hidden;
     width: 100%;
@@ -572,7 +633,8 @@ section.testimonials {
         float: left;
         margin: 0;
         padding: 0;
-        width: 800px;
+        padding-top: 15px;
+        width: 760px;
         height: 300px;
         text-align: center;
         opacity: 0.4;
@@ -628,6 +690,11 @@ section.testimonials {
       transition: all ease-in-out 0.2s; }
   section.testimonials span.control_next {
     right: 0; }
+  @media (min-width: 760px) and (max-width: 985px) {
+    section.testimonials h2 {
+      padding-top: 100px; }
+    section.testimonials #slider {
+      margin-bottom: 100px; } }
 
 section.order {
   background-image: url("../images/shapes-plate.png");
@@ -700,16 +767,26 @@ section.order {
     border: solid 1px #5cc04c;
     border-radius: 20px;
     transition: all ease-in-out 100ms; }
+  @media (min-width: 760px) and (max-width: 985px) {
+    section.order .container {
+      padding: 20px 0% 0px; }
+    section.order ul {
+      padding-left: 0px; }
+    section.order .col-1 {
+      height: 460px; }
+    section.order h2 {
+      margin-bottom: 15px; } }
 
 section.footer {
-  height: 130px;
+  min-height: 130px;
   background: #ffffff;
   color: #686868; }
   section.footer .row {
     padding-top: 30px; }
   section.footer p {
     float: left;
-    font-size: 13px; }
+    font-size: 13px;
+    text-align: left; }
     section.footer p span {
       font-weight: bold; }
       section.footer p span:last-of-type {
@@ -720,13 +797,23 @@ section.footer {
   section.footer ul {
     float: right;
     display: inline;
-    font-size: 14px; }
+    font-size: 14px;
+    padding: 0; }
     section.footer ul li {
       list-style: none;
       display: inline;
-      padding: 4px 12px; }
+      padding: 4px 10px; }
   section.footer a {
     color: #686868;
     text-decoration: none; }
     section.footer a:hover {
       text-decoration: underline; }
+  section.footer .btn {
+    display: none; }
+  @media (min-width: 760px) and (max-width: 985px) {
+    section.footer p {
+      float: none;
+      text-align: center;
+      margin-top: 20px; }
+    section.footer ul {
+      float: none; } }
