@@ -248,6 +248,11 @@ h1, h2, h3, h4, h5, h6 {
 p {
   line-height: 1.4; }
 
+@media (max-width: 759px) {
+  h2 {
+    font-size: 30px;
+    line-height: 1.2; } }
+
 .container {
   max-width: 1120px;
   width: 90%;
@@ -264,6 +269,10 @@ p {
 
 [class*='col-'] {
   float: left; }
+
+@media (max-width: 759px) {
+  .container {
+    width: 94%; } }
 
 section.home {
   padding: 40px 0;
@@ -317,8 +326,9 @@ section.home {
   section.home .hero span {
     font-weight: bold; }
     section.home .hero span:last-of-type {
-      font-size: 14px;
-      vertical-align: text-top; }
+      font-size: 10px;
+      vertical-align: text-top;
+      line-height: 18px; }
   section.home .hero img {
     display: inline-block;
     max-width: 70%;
@@ -332,6 +342,26 @@ section.home {
       margin-bottom: 20px; }
     section.home .hero h1 {
       margin-top: 35px; } }
+  @media (max-width: 759px) {
+    section.home {
+      padding-top: 15px; }
+      section.home h1 {
+        font-size: 32px; }
+      section.home .hero p {
+        font-size: 14px;
+        margin-bottom: 20px; }
+      section.home .hero img {
+        width: 90%;
+        margin-bottom: 10px;
+        max-width: 400px; }
+      section.home .hero span:last-of-type {
+        font-size: 7px;
+        line-height: 12px; }
+      section.home nav {
+        display: none; }
+      section.home .logo {
+        width: 126px;
+        margin-left: 10px; } }
 
 section.shapes {
   background-image: url("../images/shapes-plate.png");
@@ -412,6 +442,37 @@ section.shapes {
         bottom: -40px; }
       section.shapes .row {
         width: 100%; } }
+  @media (max-width: 759px) {
+    section.shapes .row {
+      width: 94%; }
+    section.shapes p {
+      margin: 15px auto 0;
+      font-size: 14px; }
+    section.shapes span:last-of-type {
+      font-size: 7px;
+      line-height: 12px; }
+    section.shapes .potato-blur-1 {
+      left: -140px;
+      top: -230px;
+      width: 200px; }
+    section.shapes .potato-blur-2 {
+      right: -130px;
+      width: 250px;
+      top: -250px; }
+    section.shapes .potato-blur-3 {
+      height: 250px;
+      bottom: -165px;
+      right: -295px; }
+    section.shapes .potato-blur-4 {
+      width: 75px;
+      left: -35px;
+      bottom: -70px; }
+    section.shapes #five-potatoes {
+      margin: 20px auto; }
+    section.shapes #potato-big {
+      width: 65%; }
+    section.shapes #potato-small {
+      width: 35%; } }
 
 section.healthy {
   background-image: url("../images/healthy-plate.png");
@@ -486,6 +547,10 @@ section.healthy {
           clear: both; }
     section.healthy ul a {
       padding: 9px 15px; }
+  section.healthy .complex {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto; }
   @media (min-width: 760px) and (max-width: 985px) {
     section.healthy {
       padding-top: 20px; }
@@ -504,6 +569,42 @@ section.healthy {
         width: 360px;
         right: -190px;
         bottom: -410px; } }
+  @media (max-width: 759px) {
+    section.healthy .row {
+      width: 94%;
+      margin: 0 auto; }
+    section.healthy h2 span:last-of-type {
+      font-size: 13px;
+      line-height: 20px; }
+    section.healthy p {
+      margin: 15px auto;
+      font-size: 14px; }
+    section.healthy .potato-sack-left {
+      width: 265px;
+      left: -182px;
+      bottom: -530px;
+      opacity: 0.8; }
+    section.healthy .potato-sack-right {
+      width: 200px;
+      right: -130px;
+      bottom: -430px;
+      opacity: 0.8; }
+    section.healthy .potato-healthy img {
+      width: 70%;
+      margin-bottom: 10px;
+      max-width: 400px; }
+    section.healthy ul {
+      max-width: 100%;
+      margin-top: 10px; }
+      section.healthy ul li {
+        width: 50%;
+        margin: 0 -15px; }
+        section.healthy ul li span {
+          font-size: 32px;
+          margin-top: 3px;
+          line-height: 1.1; }
+        section.healthy ul li p {
+          margin: 5px auto 25px; } }
 
 section.transformable {
   background-color: #f1e0b4;
@@ -600,6 +701,25 @@ section.transformable {
         width: 380px;
         top: 110px;
         right: -190px; } }
+  @media (max-width: 759px) {
+    section.transformable {
+      height: 420px; }
+      section.transformable p {
+        font-size: 14px;
+        width: 95%;
+        margin: 10px auto 30px; }
+      section.transformable #potato-rendered {
+        width: 100%;
+        max-width: 615px; }
+      section.transformable .potato-container {
+        height: 150px;
+        bottom: -40px; }
+      section.transformable .mashed-potatoes {
+        height: 155px;
+        left: -50px; }
+      section.transformable .potato-wedges {
+        height: 150px;
+        right: -430px; } }
 
 section.testimonials {
   background-image: url("../images/rotating-potatoes.png");
@@ -695,6 +815,16 @@ section.testimonials {
       padding-top: 100px; }
     section.testimonials #slider {
       margin-bottom: 100px; } }
+  @media (max-width: 759px) {
+    section.testimonials h2 {
+      padding-top: 70px; }
+    section.testimonials #slider ul li {
+      width: 320px; }
+    section.testimonials span.control_prev img,
+    section.testimonials span.control_next img {
+      width: 30px; }
+    section.testimonials .author p {
+      margin-top: 15px; } }
 
 section.order {
   background-image: url("../images/shapes-plate.png");
@@ -776,6 +906,31 @@ section.order {
       height: 460px; }
     section.order h2 {
       margin-bottom: 15px; } }
+  @media (max-width: 759px) {
+    section.order {
+      max-height: none; }
+      section.order .container {
+        padding: 30px 0 0; }
+      section.order h2 {
+        margin-bottom: 15px; }
+      section.order .col-1 {
+        width: 90%;
+        border-right: none;
+        border-bottom: 1px solid #afafaf;
+        height: 440px;
+        margin-bottom: 5px;
+        margin-left: 5%; }
+        section.order .col-1:last-child {
+          border-bottom: none; }
+      section.order .cta p {
+        margin-bottom: 12px; }
+      section.order .cta img {
+        max-width: 270px; }
+      section.order ul {
+        padding-left: 0px; }
+        section.order ul li {
+          text-align: center;
+          padding-left: 0; } }
 
 section.footer {
   min-height: 130px;
@@ -811,6 +966,13 @@ section.footer {
   section.footer .btn {
     display: none; }
   @media (min-width: 760px) and (max-width: 985px) {
+    section.footer p {
+      float: none;
+      text-align: center;
+      margin-top: 20px; }
+    section.footer ul {
+      float: none; } }
+  @media (max-width: 759px) {
     section.footer p {
       float: none;
       text-align: center;
