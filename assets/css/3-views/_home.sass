@@ -66,14 +66,16 @@ section.home
       font-weight: bold
 
       &:last-of-type
-        font-size: 14px
+        font-size: 10px
         vertical-align: text-top
+        line-height: 18px
 
     img
       display: inline-block
       max-width: 70%
       height: auto
 
+  // Media Queries for tablets
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
     .logo, nav
       float: none
@@ -85,3 +87,32 @@ section.home
 
     .hero h1
       margin-top: 35px
+
+  // Media Queries for smartphones
+  @media (max-width: $screen-xs-max)
+    padding-top: 15px
+
+    h1
+      font-size: 32px
+
+    .hero
+
+      p
+        font-size: 14px
+        margin-bottom: 20px
+
+      img
+        width: 90%
+        margin-bottom: 10px
+        max-width: 400px
+
+      span:last-of-type
+        font-size: 7px
+        line-height: 12px
+
+    nav
+      display: none
+
+    .logo
+      width: 126px
+      margin-left: 10px
