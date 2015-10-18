@@ -274,6 +274,38 @@ p {
   .container {
     width: 94%; } }
 
+.mobile-nav {
+  background-color: #a48b75;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  text-align: center;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out; }
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    position: absolute; }
+    .mobile-nav ul li {
+      text-transform: uppercase;
+      padding: 0 0 10px; }
+
+@media (max-width: 759px) {
+  .mobile-nav.is-open {
+    display: block;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%); } }
+
 section.home {
   padding: 40px 0;
   background-image: url("../images/hero-plate.png");
@@ -333,6 +365,42 @@ section.home {
     display: inline-block;
     max-width: 70%;
     height: auto; }
+  section.home .mobile-nav-toggle {
+    width: 35px;
+    height: 35px;
+    display: none;
+    z-index: 200;
+    position: relative;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding-top: 19px;
+    cursor: pointer; }
+    section.home .mobile-nav-toggle span,
+    section.home .mobile-nav-toggle span:before,
+    section.home .mobile-nav-toggle span::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: #fff;
+      position: relative;
+      transition: -webkit-transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out; }
+    section.home .mobile-nav-toggle span::before {
+      top: 10px; }
+    section.home .mobile-nav-toggle span::after {
+      top: -12px; }
+    section.home .mobile-nav-toggle.is-open span {
+      background: transparent; }
+      section.home .mobile-nav-toggle.is-open span::after, section.home .mobile-nav-toggle.is-open span::before {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 0; }
+      section.home .mobile-nav-toggle.is-open span::before {
+        -webkit-transform: rotate(-45deg) translateY(1px) translateX(-1px);
+        transform: rotate(-45deg) translateY(1px) translateX(-1px); }
   @media (min-width: 760px) and (max-width: 985px) {
     section.home .logo, section.home nav {
       float: none;
@@ -361,7 +429,9 @@ section.home {
         display: none; }
       section.home .logo {
         width: 126px;
-        margin-left: 10px; } }
+        margin-left: 10px; }
+      section.home .mobile-nav-toggle {
+        display: block; } }
 
 section.shapes {
   background-image: url("../images/shapes-plate.png");

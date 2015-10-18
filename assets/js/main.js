@@ -1,8 +1,9 @@
-
-
-
-
 $(document).ready(function () {
+	$('div[class^=mobile-nav]').on('click', toggleMobileMenu);
+
+function toggleMobileMenu() {
+		$('div[class^=mobile-nav]').addClass('is-open');
+}
 
 smoothScroll(1000);
 
