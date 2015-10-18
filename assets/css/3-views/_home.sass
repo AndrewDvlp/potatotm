@@ -75,6 +75,49 @@ section.home
       max-width: 70%
       height: auto
 
+
+  .mobile-nav-toggle
+    width: 35px
+    height: 35px
+    // background: pink
+    display: none
+    z-index: 200
+    position: relative
+    float: right
+    margin-top: 5px
+    margin-right: 10px
+    padding-top: 19px
+    cursor: pointer
+
+    span,
+    span:before,
+    span::after
+
+      content: ""
+      display: block
+      height:2px
+      background: #fff
+      position: relative
+      transition: transform 0.3s ease-in-out
+
+    span::before
+      top: 10px
+
+    span::after
+      top: -12px
+
+    &.is-open span
+      background: transparent
+
+      &::after, &::before
+        transform-origin: center
+        transform: rotate(45deg)
+
+        top: 0
+
+      &::before
+        transform: rotate(-45deg) translateY(1px) translateX(-1px)
+
   // Media Queries for tablets
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
     .logo, nav
@@ -116,3 +159,6 @@ section.home
     .logo
       width: 126px
       margin-left: 10px
+
+    .mobile-nav-toggle
+      display: block
