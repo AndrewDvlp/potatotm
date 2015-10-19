@@ -1,30 +1,17 @@
 $(document).ready(function () {
-	$('div[class^=mobile-nav]').on('click', toggleMobileMenu);
+toggleMobileMenu();
 
 function toggleMobileMenu() {
-		$('div[class^=mobile-nav]').addClass('is-open');
+	$('.mobile-nav-toggle').on('click', function() {
+	var status = $(this).hasClass('is-open');
+	if(status){ $('.mobile-nav-toggle, .mobile-nav').removeClass('is-open'); }
+	else { $('.mobile-nav-toggle, .mobile-nav').addClass('is-open'); }
+	});
 }
 
 smoothScroll(1000);
 
-// Gallery function
-	var inkbox = document.getElementById("potato-rendered");
-	var colorbox = document.getElementById("nonrendered");
-	var fillerImage = document.getElementById("rendered");
-	var handle = document.getElementById("handle");
-	inkbox.addEventListener("mousemove",trackLocation,false);
-	inkbox.addEventListener("touchstart",trackLocation,false);
-	inkbox.addEventListener("touchmove",trackLocation,false);
 
-	function trackLocation(e)
-	{
-		var rect = fillerImage.getBoundingClientRect();
-		var position = ((e.pageX - rect.left) / fillerImage.offsetWidth)*100;
-		var position2 = ((e.pageX - rect.left -10) / fillerImage.offsetWidth)*100;
-		if (position <= 100) { colorbox.style.width = position+"%"; handle.style.left = position2+"%"; }
-	}
-
-// End Gallery function
 
 
 // Slider function
@@ -151,6 +138,7 @@ smoothScroll(1000);
 function smoothScroll (duration) {
 	$('a[href^=#]').on('click', function(event) {
 		var target = $($(this).attr('href'));
+		$('.mobile-nav-toggle, .mobile-nav').removeClass('is-open');
 
 		if( target.length) {
 			event.preventDefault();
@@ -160,3 +148,41 @@ function smoothScroll (duration) {
 		}
 	});
 }
+
+// Gallery function
+	var inkbox = document.getElementById("hoverdiv");
+	var colorbox = document.getElementById("nonrendered");
+	var fillerImage = document.getElementById("rendered");
+	var handle = document.getElementById("handle");
+	inkbox.addEventListener("mousemove",trackLocation,false);
+	inkbox.addEventListener("touchstart",trackLocation,false);
+	inkbox.addEventListener("touchmove",trackLocation,false);
+	inkbox.addEventListener("mouseleave",hoverOut,false);
+
+	function trackLocation(e)
+	{
+		var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+		var rect = fillerImage.getBoundingClientRect();
+		var position = ((startX - rect.left) / fillerImage.offsetWidth)*100;
+
+		// Set limits
+    var minLeft = 15;
+    var maxLeft = 90;
+
+		if (position <= 100) {
+			if (position < minLeft) {position = minLeft;}
+			if (position > maxLeft) {position = maxLeft;}
+			colorbox.style.width = position+"%"; handle.style.left = position+"%";
+		}
+	}
+
+	function hoverOut() {
+		var position = 50;
+		var myWidth = position+"%";
+		$('#nonrendered').animate({
+			width: myWidth}, 280);
+		$('#handle').animate({
+			left: myWidth}, 280);
+	}
+
+// End Gallery function

@@ -74,14 +74,16 @@ section.transformable
 
   .handle
     position: absolute
-    background-image: url('../images/slider.png')
-    background-size: contain
-    background-repeat: no-repeat
+    background:
+      image: url('../images/slider.png')
+      size: contain
+      repeat: no-repeat
+      position:center center
     top: -5px
-    left: calc(50% - 10px)
+    left: calc(50%)
+    transform: translateX(-50%)
     height: 100%
     width: 20px
-    margin-left: 4px
 
 
   p
